@@ -2,7 +2,7 @@
 
 공유 자전거 통계 정보를 분석해보는 실습입니다.
 
-![](/SeoulBikeRent/data/스크린샷%202025-02-12%20오후%2010.45.38.png)
+![](/SeoulBikeRent/data/bikemap.png)
 
 ---
 [`나가기`](../)
