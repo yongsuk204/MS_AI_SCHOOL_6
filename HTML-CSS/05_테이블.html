@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 태그</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        padding: 10px;
+      }
+      th {
+        background-color: lightblue;
+      }
+    </style>
+    <!-- 시멘틱 태그라고 해서 의미를 가지는 태그를 말하는데
+태그마다 스타일도 다르지만 내용의 의미에 맞게 태그를 지정함으로써 아래와 같은 이점이 있습니다.
+코드 가독성향상
+<td> -> <th> 로 함으로써 코드만 보고도 table head cell이란걸 알수있음
+검색 엔진 최적화
+구글과 같은 검색엔진이 페이지를 더 잘이해하게 함으로써 더 잘 이해시키고 노출되도록 할수있습니다
+웹 접근성 향상
+스크린 리더가 더 쉽게 html 해석 가능 -> 앞이 보이지 않는 분들은 스크린 리더가 태그를 기준으로 해석하고 설명해주기 때문에 이런 것들을 맞추면 좋습니다. -->
+  </head>
+  <body>
+    <table>
+      <caption>
+        세미나 일정
+      </caption>
+      <tr>
+        <th>지역</th>
+        <th>일자</th>
+        <th>시간</th>
+        <th>장소</th>
+      </tr>
+      <tr>
+        <td>대전</td>
+        <td>4월11일(화)</td>
+        <td>10:00~13:00</td>
+        <td>라온컨벤션 1층 가림홀</td>
+      </tr>
+      <tr>
+        <td>광주</td>
+        <td>4월20일(목)</td>
+        <td>13:00~16:00</td>
+        <td>라마다 플라자 호텔4층 대연회장</td>
+      </tr>
+      <tr>
+        <td rowspan="2">서울</td>
+        <td>6월15일(목)</td>
+        <td>14:00~17:00</td>
+        <td>코엑스 컨퍼런스룸 401호</td>
+      </tr>
+      <tr>
+        <td>6월21일(수)</td>
+        <td>14:00~17:00</td>
+        <td>당산 그랜드컨벤션센터 2층</td>
+      </tr>
+      <tr>
+        <td>부산</td>
+        <td colspan="3">미정</td>
+      </tr>
+      <!-- tr*3>td*3 자동완성기능이 있음 -->
+    </table>
+  </body>
+</html>

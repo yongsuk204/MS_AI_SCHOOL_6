@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <!-- 헤더는 html문서의 정보를 담는다 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>처음해보는거야</title>
+    <link rel="stylesheet" href="00_test.css" />
+    <style>
+      h1 {
+        color: rosybrown;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 바디는 html 문서의 내용을 담는다 주석처리는 언어, 파일마다 다르기때문에 컨트롤+/ 하는것을 추천 -->
+    hello world!
+    <h1>웹 개발 기초</h1>
+    <!-- h : 제목태그 -->
+    <p onclick="alert('html')">html : 뼈대를 구성함</p>
+    <p style="color: blueviolet">css : 레이아웃(보여지는것)을 구성함</p>
+    <p>javascript : 동작, 움직임을 구성함</p>
+    <!-- p : 문단태그(사이사이 간격이 있다) -->
+    <button>시작하기</button>
+    <!-- 자바스크립트의 위치는 바디를 닫기전에 위치하는게 이상적이다(위에서부터 차례대로 읽어내려가기때문) -->
+    <script src="00_test.js"></script>
+    <script>
+      let element_h1 = document.querySelector("h1");
+      element_h1.onclick = function () {
+        element_h1.style.backgroundColor = "aqua";
+      };
+    </script>
+  </body>
+</html>
