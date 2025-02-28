@@ -1,0 +1,30 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'); */
+/* @import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Noto+Sans+KR:wght@100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Jua&family=Noto+Sans+KR:wght@100..900&display=swap");
+.p1 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: lighter;
+  text-align: center;
+  text-decoration: underline;
+}
+.p2 {
+  font-family: "Gowun Batang", serif;
+  /* font-size: 30px; */
+  font-size: 2em;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 5px 5px 10px;
+  letter-spacing: 3px;
+  line-height: 20;
+}
+.p3 {
+  font-family: "Jua", sans-serif;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+/*
+rem: 최상위 요소(html)의 크기에 대한 비율
+em: 상위 요소(부모)의 크기에 대한 비율 
+*/

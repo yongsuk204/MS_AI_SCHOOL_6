@@ -1,0 +1,49 @@
+* {
+  color: rgb(33, 185, 250);
+  margin: 0px;
+  /* padding: 10px; */
+}
+/* 
+요소 경계선 안에 여백 추가 : padding
+요소 경계선 밖에 여백 추가 : margin 
+*/
+#main-container {
+  background-color: blanchedalmond;
+  padding: 20px;
+  display: inline-block;
+}
+.container {
+  background-color: white;
+  padding: 10px;
+}
+.margin-bottom20 {
+  margin-bottom: 20px;
+}
+ul {
+  list-style: circle;
+}
+[href="https://www.w3.org/"]
+{
+  font-weight: bold;
+  font-size: 20px;
+  color: burlywood;
+}
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgb(215, 201, 182);
+}
+
+a:active {
+  background-color: aqua;
+}
+
+a:visited {
+  color: blueviolet;
+}
+
+div:hover {
+  background-color: beige;
+}

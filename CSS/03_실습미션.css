@@ -1,0 +1,68 @@
+body {
+  font-family: "Arial", sans-serif;
+  color: #6e4b37;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("data/고흐_별이빛나는밤.jpg");
+  background-size: cover; /* 화면에 맞게 조절 */
+  background-position: center; /* 중앙 정렬 */
+  background-repeat: no-repeat; /* 반복 방지 */
+}
+
+.main-container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 2em;
+  color: #6d4c41;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #8d6e63;
+  margin-bottom: 20px;
+}
+
+div {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.main-container div:last-child {
+  font-style: italic;
+  color: #757575;
+}
+
+.container-1,
+.container-2 {
+  background: #fff3e0;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.container-1 {
+  border-left: 5px solid #ffab91;
+}
+
+.container-2 {
+  border-left: 5px solid #ffcc80;
+}
+
+img {
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

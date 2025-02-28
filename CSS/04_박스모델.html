@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1,
+      .box2,
+      .box3 {
+        width: 400px;
+        background-color: antiquewhite;
+        border: 20px, solid, black;
+        padding: 20px;
+        margin: 20px;
+      }
+      .box1 {
+        border-radius: 30px/10px;
+        padding: 0px 10px 30px 0px;
+      }
+      .box2 {
+        border-radius: 50%;
+      }
+      .box3 {
+        box-sizing: border-box;
+        box-shadow: 5px 5px 5px 0px red;
+        border-style: solid;
+        border-top-color: red;
+        border-bottom: dotted blueviolet;
+        border-radius: 10px 30px 10px 20px;
+      }
+      .box3:hover {
+        box-shadow: 0px 0px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">나는 박스 1입니다.</div>
+    <div class="box2">나는 박스 2입니다.</div>
+    <div class="box3">나는 박스 3입니다.</div>
+  </body>
+</html>

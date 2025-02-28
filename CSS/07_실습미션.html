@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습미션</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        background-image: url("data/다운로드1.jpeg");
+        /* background-size: cover; */
+        /* background-position: center;
+        background-repeat: no-repeat; */
+      }
+
+      div {
+        color: rgb(255, 255, 255);
+        background: rgba(0, 0, 0, 0.6); /* 반투명한 검은색 배경 */
+        border-radius: 20px;
+        padding: 20px 40px;
+        font-size: 5vw;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      div:hover {
+        transform: scale(1.1);
+      }
+
+      h1 {
+        font-size: 3em;
+        margin: 0;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 1.5em;
+        margin: 15px 0;
+        letter-spacing: 2px;
+      }
+
+      .btn {
+        background-color: #ff6f61;
+        color: white;
+        font-size: 1.2em;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #ff4f3b;
+      }
+
+      .btn:focus {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>hello world!</h1>
+      <p>Chi!!</p>
+      <button class="btn">더 알아보기</button>
+    </div>
+  </body>
+</html>

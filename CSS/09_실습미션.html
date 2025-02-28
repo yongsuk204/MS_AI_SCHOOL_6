@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>디스플레이그리드</title>
+    <style>
+      #container {
+        background-color: lightblue;
+        padding: 1px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        /* grid-template-rows: 10px; */
+        grid-gap: 10px;
+      }
+      .box {
+        background-color: rgb(255, 255, 255);
+        /* border: 1px solid white; */
+        /* display: flex; */
+        /* justify-content: center;
+        align-items: center; */
+        text-align: center;
+        border-radius: 15px 15px 10px 10px;
+      }
+      @media screen and (min-width: 980px) {
+        #container {
+          grid-template-columns: repeat(1, 1fr);
+          background-color: antiquewhite;
+        }
+      }
+      .box img {
+        border-radius: 10px;
+        width: 150px; /* 고정된 너비 설정 (원하는 크기로 조정) */
+        height: 150px; /* 고정된 높이 설정 */
+        object-fit: cover; /* 비율을 유지하면서 박스 크기에 맞춤 */
+        border-radius: 15px; /* 모서리 둥글게 (선택 사항) */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="box">
+        <img src="data/다운로드.jpeg" alt="" />
+        <p>chill</p>
+      </div>
+
+      <div class="box">
+        <img src="data/고흐_별이빛나는밤.jpg" alt="" />
+        <p>별이빛나는밤</p>
+      </div>
+
+      <div class="box">
+        <img src="data/pooh.jpeg" alt="" />
+        <p>푸</p>
+      </div>
+
+      <div class="box">
+        <img src="data/그림1호.jpg" alt="" />
+        <p>코끼리 없다</p>
+      </div>
+
+      <div class="box">
+        <img src="data/그림2호.jpg" alt="" />
+        <p>코끼리 없다</p>
+      </div>
+
+      <div class="box">
+        <img src="data/다운로드1.jpeg" alt="" />
+        <p>7</p>
+      </div>
+    </div>
+  </body>
+</html>
