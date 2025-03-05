@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트객체</title>
+  </head>
+  <body>
+    <p>마우스를 클릭하면, 클릭한 곳의 좌표가 표시됩니다.</p>
+    <div class="pos"><!--좌표 표시--></div>
+    <script>
+      //좌표를 표시할 요소 취득
+      const $pos = document.querySelector(".pos");
+      console.log($pos);
+      //이벤트 핸들러 만들기
+      // function showPosition(e) {
+      //   $pos.textContent = `X:${e.clientX}, Y:${e.clientY}`;
+      // }
+      // 이벤트 핸들러 등록하기
+      // document.onclick = showPosition;
+      document.onclick = (e) =>
+        ($pos.textContent = `(X:${e.clientX}, Y:${e.clientY})`);
+    </script>
+  </body>
+</html>

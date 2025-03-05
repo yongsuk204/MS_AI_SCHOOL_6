@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3 style="color: blue">인라인 이벤트핸들러 방식</h3>
+    <p>on이벤트 = "함수호출문"</p>
+    <button class="btn1" onclick="function_number(1)">button1</button>
+    <button class="btn2" onclick="function_number(2)">button2</button>
+    <button class="btn3" onclick="function_number(3)">button3</button>
+    <div>클릭한 버튼 : <span class="btn-number"></span></div>
+    <script>
+      function function_number(num) {
+        document.querySelector(".btn-number").textContent = "button" + num;
+      }
+    </script>
+  </body>
+</html>

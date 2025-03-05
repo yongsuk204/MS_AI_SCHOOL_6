@@ -18,7 +18,7 @@ console.log(message[-1]); // undefined (마이너스 인덱스 없음)
 console.log(message[100]); // undefined (인덱스의 범위를 벗어남)
 
 // 특정 문자의 인덱스
-console.log(message.indexOf("W"));
+console.log(message.indexOf("Worl"));
 console.log(message.indexOf("a")); // -1 없는 문자
 
 // 특정 문자 포함 여부

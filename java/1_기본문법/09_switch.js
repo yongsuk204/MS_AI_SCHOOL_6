@@ -1,7 +1,7 @@
 // 요일 이름 변경하기
 // 0:Sun ~ 6:Sat
 
-let week = 100;
+let week = 4;
 let weekName;
 
 switch (week) {

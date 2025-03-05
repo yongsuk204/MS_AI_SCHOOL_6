@@ -31,6 +31,7 @@ while (i <= 5) {
   console.log(i);
   i++;
 }
+console.log(i);
 console.log("========");
 // 1부터 5까지 출력하기
 i = 1;
