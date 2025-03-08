@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,5 +11,25 @@
       <li class="css">css</li>
       <li class="js">javascript</li>
     </ul>
+    <script>
+      function createLi(text) {
+        // 새로운 li요소 생성
+        const $li = document.createElement("li");
+        $li.setAttribute("class", "text");
+        // 텍스트 노드 생성
+        const $text_node = document.createTextNode(text);
+
+        // DOM tree에 추가
+        const $ul = document.querySelector("ul");
+        $ul.appendChild($li);
+        // DOM tree에 추가
+        $li.appendChild($text_node);
+      }
+
+      createLi("sdkjsdflk"); // 함수로 만든거사용
+
+      // 노드 삭제
+      document.querySelector(".js").remove();
+    </script>
   </body>
 </html>
