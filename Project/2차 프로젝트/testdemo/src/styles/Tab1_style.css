@@ -1,0 +1,239 @@
+/* src/styles/Tab1_style1.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.phone-frame {
+  width: 440px;
+  margin: 0 auto;
+  background-color: #fcfffb;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.section-banner1 {
+  background-color: rgba(230, 230, 230, 0.5);
+  padding: 16px 25px 10px 25px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.title1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #3d3d3d;
+}
+
+.description1 {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #666;
+}
+
+.section-body1 {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-row1 {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.dropdown1 {
+  width: 202px; /* ✅ 고정 너비 */
+  height: 50px; /* ✅ 고정 높이 */
+  padding: 0 40px 0 15px; /* ✅ 오른쪽 40px은 화살표와의 간격 */
+  border-radius: 4px;
+  border: 1px solid #999;
+  font-size: 14px;
+
+  color: #6b7280; /* ✅ 텍스트 색상 추가 */
+  font-weight: 700;
+
+  appearance: none; /* 🔥 기본 화살표 제거 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+.action-button1 {
+  width: 140px; /* ✅ 가로 고정 */
+  height: 50px; /* ✅ 세로 고정 */
+  background-color: #8dbb9e;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  display: flex; /* ✅ 가운데 정렬 */
+  align-items: center; /* ✅ 수직 가운데 */
+  justify-content: center; /* ✅ 수평 가운데 */
+
+  margin-left: 7px; /* ✅ 드롭박스와의 간격 */
+}
+
+.action-button1:hover {
+  background-color: #7aa98b;
+}
+
+.chat-box1 strong {
+  font-size: 14px; /* ✅ 제목 크기 통일 */
+  font-weight: bold;
+  color: #3d3d3d;
+  margin-bottom: 10px; /* ✅ 여백 추가 */
+  display: block; /* ✅ 줄바꿈 보장 */
+}
+
+.chat-box1 {
+  margin-bottom: 20px;
+}
+
+.chat-output1 {
+  padding: 10px 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  /* min-height: 100px; */ /* 👈 최소 높이 제거 또는 주석 처리 */
+  height: 170px; /* 👈 원하는 고정 높이 설정 (예: 300px, 값 조절 가능) */
+  overflow-y: auto; /* 👈 내용이 넘칠 경우 세로 스크롤 자동 생성 */
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  white-space: pre-wrap; /* 줄바꿈 유지 */
+  box-sizing: border-box; /* 👈 padding이 height 계산에 포함되도록 추가 (권장) */
+}
+.answer-section1 {
+  margin-bottom: 20px;
+}
+
+.answer-title1 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #3d3d3d;
+}
+
+.answer-button-row1 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.answer-button1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 2px solid #8dbb9e;
+  background-color: transparent;
+  color: #8dbb9e;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.answer-button1.selected {
+  background-color: #8dbb9e;
+  color: white;
+}
+
+.submit-button2 {
+  height: 50px;
+  width: 140px;
+  background-color: #8dbb9e;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  margin-left: auto;
+  cursor: pointer;
+
+  display: flex; /* ✅ 가운데 정렬 추가 */
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button2:hover {
+  background-color: #7aa98b;
+}
+
+/* 비활성화된 버튼 공통 스타일 (submit-button과 유사하게) */
+.submit-button2:disabled,
+.action-button1:disabled,
+.expect-button1:disabled,
+.next-button1:disabled {
+  background-color: #ccc; /* 비활성화 시 회색 배경 */
+  color: #666; /* 비활성화 시 텍스트 색상 */
+  cursor: not-allowed; /* 비활성화 시 커서 모양 변경 */
+  opacity: 0.7; /* 약간 투명하게 (선택 사항) */
+}
+
+.next-button1 {
+  width: 100%;
+  height: 50px;
+  background-color: #8dbb9e;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.next-button1:hover {
+  background-color: #7aa98b;
+}
+
+.dropdown-wrapper1 {
+  margin-bottom: 20px;
+}
+
+.dropdown-wrapper1 select {
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid #999;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.expect-button1 {
+  width: 150px; /* ✅ 가로 고정 */
+  height: 50px; /* ✅ 세로 고정 */
+  background-color: #8dbb9e;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  display: flex; /* ✅ 가운데 정렬 */
+  align-items: center; /* ✅ 수직 가운데 */
+  justify-content: center; /* ✅ 수평 가운데 */
+
+  margin-left: 7px; /* ✅ 드롭박스와의 간격 */
+}
+
+.expect-button1:hover {
+  background-color: #7aa98b;
+}

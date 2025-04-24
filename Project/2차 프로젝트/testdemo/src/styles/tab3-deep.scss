@@ -1,0 +1,264 @@
+/* 기본 스타일 초기화 및 설정 */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+/* 새로 추가: 루트 컨테이너 스타일 */
+.root-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* --- 기존 .app-container 스타일은 유지 (화면 전체 flex 설정) --- */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 상단 정렬 유지 */
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff; /* ✅ Tab3의 body 배경색과 동일하게 설정 */
+}
+
+/* --- .app-content 를 .phone-frame 처럼 보이게 수정 --- */
+.app-content {
+  /* Tab3-deep.jsx에서 이 클래스를 사용한다고 가정 */
+  width: 440px; /* ✅ Tab3의 .phone-frame 너비와 동일하게 */
+  max-width: none; /* 기존 max-width 제거 */
+  margin: 0 auto; /* 수평 중앙 정렬 유지 */
+  background-color: #fcfffb; /* ✅ Tab3의 .phone-frame 배경색과 동일하게 */
+  border-radius: 12px; /* ✅ Tab3의 .phone-frame border-radius와 동일하게 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ✅ Tab3의 .phone-frame 그림자와 동일하게 */
+  /* 기존 padding, min-height 등은 제거하고 아래 main-content 영역에서 관리 */
+  padding: 0; /* 내부 패딩 제거 */
+  min-height: auto; /* 최소 높이 제거 */
+  display: block; /* flex 대신 기본 block으로 (내부에서 다시 flex 사용) */
+}
+
+/* --- .app-content 내부에 .main-content 영역 스타일 적용 --- */
+/* Tab3-deep.jsx에서 .app-content 바로 아래에 main 태그나 div가 있다고 가정 */
+.app-content > main,
+.app-content > div:first-child {
+  /* 또는 실제 콘텐츠를 감싸는 요소 선택자 */
+  padding: 20px; /* ✅ Tab3의 .main-content3 패딩과 동일하게 */
+  min-height: 600px; /* ✅ Tab3의 .main-content3 최소 높이와 동일하게 */
+  display: flex; /* ✅ Tab3의 .main-content3 레이아웃과 동일하게 */
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box; /* 패딩 포함 */
+}
+
+/* 기존 배너 */
+.intro-section {
+  background-color: rgba(230, 230, 230, 0.5);
+  padding: 16px 25px 10px 25px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  margin-left: 20px; /* 👈 왼쪽 바깥 여백 5px 추가 */
+  margin-right: 20px; /* 👈 오른쪽 바깥 여백 5px 추가 */
+  margin-top: 20px;
+  box-sizing: border-box; /* 👈 패딩이 너비 계산에 포함되도록 추가 (안전) */
+}
+
+/* 배너 '오답 문제 풀이' 텍스트 */
+.intro-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #3d3d3d;
+}
+
+/* 배너 페이지 설명 텍스트 */
+.intro-description {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #666;
+}
+
+/* 문제 섹션 */
+.problem-section {
+  margin: 20px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.problem-content {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  min-height: 120px;
+  max-height: 150px; /* ✅ 최대 높이 설정 (원하는 높이로 조절하세요. 예: 300px) */
+  overflow-y: auto; /* ✅ 내용이 max-height를 넘으면 세로 스크롤 자동 생성 */
+  box-sizing: border-box; /* ✅ 패딩/테두리가 높이에 포함되도록 추가 (안전) */
+}
+
+.content-text {
+  color: #444; /* 더 진한 색상으로 변경 */
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.6; /* 가독성을 위한 줄 간격 추가 */
+  white-space: pre-wrap; /* 줄바꿈 유지 */
+}
+
+/* 정답 선택 폼 */
+/* '정답을 선택하세요'텍스트 윗부분 여백*/
+.answer-form {
+  margin-top: 20px;
+}
+
+/* '정답을 선택하세요'텍스트 */
+.answer-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #3d3d3d;
+  margin-bottom: 8px;
+}
+
+/* 번호(1 2 3 4), 정답제출 버튼 */
+.answer-options {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* 번호(1 2 3 4) */
+.option-circles {
+  display: flex;
+  gap: 14px;
+}
+
+/* 각 번호 옵션 */
+.option-circle {
+  width: 37px;
+  height: 37px;
+  border-radius: 999px;
+  border: 2.3px solid #8dbb9e;
+  background-color: transparent; /* ✅ Tab1의 기본 배경색 */
+  color: #8dbb9e; /* ✅ Tab1의 기본 글자색 */
+  font-weight: 700; /* ✅ Tab1처럼 굵게 */
+  cursor: pointer;
+  font-size: 20px; /* ✅ Tab1의 폰트 크기와 동일하게 (예: 16px) */
+  display: flex; /* 👈 내부 텍스트 중앙 정렬 위해 추가 */
+  align-items: center; /* 👈 수직 중앙 정렬 */
+  justify-content: center; /* 👈 수평 중앙 정렬 */
+}
+
+/* 선택된 번호 옵션 스타일 */
+.option-circle.selected {
+  background-color: #8dbb9e;
+  color: white;
+}
+
+/* 정답 제출 버튼 (활성화)*/
+.submit-button {
+  height: 50px;
+  width: 140px;
+  background-color: #8dbb9e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 정답 제출 버튼 비활성화(기본)*/
+.submit-button:disabled {
+  background-color: #ccc; /* 비활성화 시 회색 배경 */
+  color: #666; /* 비활성화 시 텍스트 색상 */
+  cursor: not-allowed; /* 비활성화 시 커서 모양 변경 */
+  opacity: 0.7; /* 약간 투명하게 (선택 사항) */
+}
+
+/* 해답 박스 */
+.solution-box {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0px 20px 20px 20px;
+  min-height: 100px; /* 최소 높이는 유지 (선택 사항) */
+  max-height: 100px; /* ✅ 최대 높이 설정 (원하는 높이로 조절하세요. 예: 300px) */
+  overflow-y: auto; /* ✅ 내용이 max-height를 넘으면 세로 스크롤 자동 생성 */
+  background-color: #ffffff;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap; /* 줄바꿈 유지 */
+  color: #3d3d3d;
+}
+
+.solution-box p {
+  font-weight: normal;
+  color: #3d3d3d;
+}
+
+/* 문제 네비게이션 추가 */
+/* 이전문제, 페이지네이션, 다음문제*/
+.problem-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+/* '이전문제', '다음문제' 버튼 */
+.nav-button {
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #4b5563;
+  cursor: pointer;
+}
+
+/* '이전문제' 버튼 활성화 */
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 페이지 넘버 */
+.problem-counter {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+/* 돌아가기 버튼 */
+.back-button {
+  display: block;
+  width: calc(100% - 40px);
+  height: 50px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #8dbb9e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #7aa98b;
+}

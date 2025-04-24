@@ -1,0 +1,58 @@
+/* src/App.css */
+
+/* 기본 Create React App 스타일 (사용하지 않으면 제거 가능) */
+.App {
+  text-align: center; /* .App 내의 인라인 또는 인라인 블록 콘텐츠 가운데 정렬 */
+}
+
+.App-logo {
+  height: 40vmin; /* 뷰포트의 작은 치수에 비례하여 높이 설정 */
+  pointer-events: none; /* 로고가 상호작용하지 않도록 함 */
+}
+
+/* 로고 애니메이션 */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; /* 회전 애니메이션 적용 */
+  }
+}
+
+/* 예시 헤더 스타일 (종종 제거되거나 대체됨) */
+.App-header {
+  background-color: #282c34; /* 어두운 배경색 */
+  min-height: 100vh; /* 전체 뷰포트의 최소 높이 */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 항목 수평 가운데 정렬 */
+  justify-content: center; /* 항목 수직 가운데 정렬 */
+  font-size: calc(10px + 2vmin); /* 반응형 글꼴 크기 */
+  color: white; /* 텍스트 색상 */
+}
+
+/* 예시 링크 스타일 */
+.App-link {
+  color: #61dafb; /* React 파란색 */
+}
+
+/* 로고 회전 애니메이션 키프레임 */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 사용자 지정 폰 프레임 스타일 */
+.phone-frame {
+  width: 440px; /* 고정 너비 (예: iPhone 16 Pro Max 기준) */
+  min-height: 100vh; /* 최소한 전체 뷰포트 높이 차지 */
+  margin: 0 auto; /* 페이지에서 프레임을 수평으로 가운데 정렬 */
+  background: #fff; /* 흰색 배경 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* 은은한 그림자 */
+  border-radius: 12px; /* 둥근 모서리 */
+  display: flex; /* 자식 요소에 flexbox 레이아웃 활성화 */
+  flex-direction: column; /* 자식 요소를 수직으로 쌓음 */
+  /* 참고: 이 프레임은 index.css의 body 스타일과 충돌할 수 있음 (둘 다 콘텐츠 가운데 정렬 시) */
+}

@@ -1,0 +1,570 @@
+/* src/styles/Tab2_style.css */
+
+/* --- 기본 레이아웃 (다른 탭과 공유될 수 있음) --- */
+/* .phone-frame, .main-content 스타일은 전역 CSS나 다른 파일에서 관리될 수 있으므로,
+   여기서는 Tab2 특화 스타일만 남기거나 필요한 경우 가져옵니다.
+   만약 전역 스타일이 없다면 아래 주석 처리된 부분을 활성화하세요. */
+
+/*
+.phone-frame {
+  width: 100%;
+  max-width: 420px;
+  height: 80vh;
+  max-height: 800px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+  padding: 20px;
+  overflow-y: auto;
+  flex-grow: 1;
+  background-color: #f8f9fa;
+}
+*/
+
+/*-------------- main-content tab2-container ------------*/
+.tab2-container {
+} /* 모든 컨텐츠를 다 안고 있는 컨테이너 박스 */
+
+/*-------------- 배너 --------------*/
+/* 요약 노트 배너 */
+.section-banner {
+  background-color: rgba(230, 230, 230, 0.5);
+  padding: 16px 25px 10px 25px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+/* '요약 노트' 텍스트 */
+.title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #3d3d3d;
+}
+
+/* '이미지를 AI요약하고~' 텍스트 */
+.description {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #666;
+}
+
+/*-------------- 요약 부분 폼 --------------*/
+/* --- 폼 및 컨텐츠 래퍼 --- */
+.tab2-form {
+}
+
+/* --- 폼 및 컨텐츠 래퍼 --- */
+.tab2-content-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap; /* 작은 화면에서 컬럼 아래로 */
+}
+
+/* --- 입력/출력 컬럼 박스 --- */
+.input-column,
+.output-column {
+  flex: 1;
+  min-width: 300px; /* 컬럼 최소 너비 */
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 입력 요소 섹션 간격 --- */
+.input-column > div {
+  margin-bottom: 20px;
+}
+.input-column > div:last-child {
+  margin-bottom: 0;
+}
+
+/* '이미지 업로드' 텍스트 */
+.column-title {
+  margin-top: 0px;
+  padding-bottom: 0px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3d3d3d;
+}
+
+/* --- 이미지 미리보기 --- */
+.image-preview-container {
+  margin-top: 15px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.image-preview-container p {
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #666;
+}
+
+.image-preview {
+  display: block;
+  max-width: 100%;
+  max-height: 250px; /* 최대 높이 조절 가능 */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.tab2-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 14px; /* 제목 크기 조정 예시 */
+}
+
+.tab2-content-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap; /* 작은 화면에서 컬럼 아래로 */
+}
+
+/* --- 입력 요소 섹션 간격 --- */
+.input-column > div {
+  margin-bottom: 20px;
+}
+.input-column > div:last-child {
+  margin-bottom: 0;
+}
+
+/* --- 파일 업로드 섹션 --- */
+.upload-section {
+  margin-top: 0px; /* 원래 간격보다 좁게 */
+  margin-bottom: 0px;
+}
+
+/* --- 파일 업로드 박스 --- */
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  border: 2px dashed #8dbb9e;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.upload-box:hover {
+  background-color: #f8fafc;
+}
+
+.upload-text {
+  line-height: 20px;
+  color: #666;
+  font-size: 14px;
+}
+
+.upload-hint {
+  color: #8dbb9e;
+  font-size: 12px;
+}
+
+/* --- 파일 업로드 아이콘 --- */
+.upload-icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 8px;
+  stroke: #8dbb9e; /* 아이콘 선 색상 */
+  fill: none; /* 아이콘 내부 채우기 없음 (SVG 자체에 없으면 추가) */
+  stroke-width: 2; /* 아이콘 선 두께 (SVG 자체에 없으면 추가) */
+}
+
+/* --- '이미지 파일을 업로드하세요' 텍스트  --- */
+.upload-text {
+  line-height: 20px;
+}
+
+/* --- '(.jpg, .png 등)' 텍스트  --- */
+.upload-hint {
+  color: #8dbb9e;
+  font-size: 12px;
+}
+
+/* --- 스타일 선택 섹션 
+('요약 노트 제목 (선택)', 제목입력하세요 텍스트칸, '요약스타일~', 요약스타일 드롭다운) --- */
+.style-section {
+}
+
+/* 파일명 입력, 업로드 박스 등의 라벨 */
+.label-title {
+  display: block;
+  font-weight: bold;
+  color: #3d3d3d;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+/* '요약 노트 제목 (선택)', '제목을 입력하세요' 섹션 전체 스타일 */
+.title-input-section {
+  margin-bottom: 15px; /* 아래쪽 다른 요소와의 간격 */
+  width: 100%; /* 부모 요소 너비에 맞춤 */
+}
+
+/* '요약 노트 제목 (선택)' 라벨 스타일 */
+.title-input-section .section-label {
+  display: block; /* 라벨을 블록 요소로 만들어 줄바꿈 */
+  font-weight: 700; /* 글씨 두께 */
+  color: #3d3d3d; /* 글씨 색상 */
+  margin-bottom: 8px; /* 입력 필드와의 간격 */
+  font-size: 14px; /* 글씨 크기 */
+}
+
+/* '제목을 입력하세요' 텍스트 입력 필드 스타일 */
+.title-input {
+  width: 100%; /* 부모 요소 너비에 맞춤 */
+  height: 50px; /* 입력 필드 높이 */
+  padding: 10px 15px; /* 내부 여백 (상하, 좌우) */
+  border: 1px solid #ccc; /* 테두리 */
+  border-radius: 4px; /* 테두리 둥글게 */
+  box-sizing: border-box; /* padding과 border를 너비에 포함 */
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* 부드러운 전환 효과 */
+  font-size: 14px;
+  color: #666;
+}
+
+/* '제목을 입력하세요' 텍스트 박스 포커스(활성화) 시 스타일 */
+.title-input:focus {
+  border-color: #8dbb9e; /* 포커스 시 테두리 색상 변경 */
+  outline: none; /* 기본 포커스 아웃라인 제거 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* 포커스 시 그림자 효과 */
+}
+
+/* '제목을 입력하세요' 텍스트 박스 비활성화 시 스타일 */
+.title-input:disabled {
+  background-color: #ccc; /* 배경색 변경 */
+  cursor: not-allowed; /* 커서 모양 변경 */
+  border-color: #ced4da; /* 테두리 색상 변경 */
+  opacity: 0.7;
+}
+
+.filename-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px; /* 업로드 박스와의 간격 */
+}
+
+/* '요약 스타일을 선택해주세요' 라벨 */
+.section-label {
+  display: block;
+  font-weight: 700;
+  color: #3d3d3d;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* TTS 변환 */
+/* 목소리/배속/시간 선택 드롭박스 라벨 */
+.style-select-row {
+  display: flex;
+  gap: 7px; /* 드롭다운 사이 간격 */
+  margin-bottom: 15px; /* 버튼과의 간격 */
+  height: 50px;
+}
+
+/* 목소리/배속/시간 선택 드롭박스 */
+.select-box {
+  flex: 1; /* 공간 균등 분배 */
+  padding: 0px 40px 0px 15px; /* 오른쪽: 화살표 공간 확보 */
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #999;
+  background-color: white;
+  cursor: pointer;
+  color: #3d3d3d;
+  font-weight: 700;
+  /* --- ▼ 화살표 스타일 (Tab1의 .dropdown1에서 가져옴) ▼ --- */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center; /* Tab1 값 */
+  background-size: 16px; /* Tab1 값 */
+  /* --- ▲ 화살표 스타일 끝 ▲ --- */
+}
+
+/* 목소리/배속/시간 선택 드롭박스 */
+.select-box:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.select-box:hover {
+  background-color: #ececec;
+}
+
+/* --- '요약 시작' 버튼 --- */
+.summation-button {
+  width: 100%;
+  height: 50px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #666666;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  /* 기본 상태 (비활성화 또는 이미지 로드 전) */
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* 이미지가 로드되었고 버튼이 활성화된 상태 */
+.summation-button.image-loaded:not(:disabled) {
+  background-color: #8dbb9e; /* 활성 색상 */
+  cursor: pointer;
+  color: white;
+  opacity: 100;
+}
+
+/* 활성화된 버튼 호버 시 (선택 사항) */
+.summation-button.image-loaded:not(:disabled):hover {
+  background-color: #7aa98b; /* 호버 색상 */
+}
+
+/* 명시적 비활성화 스타일 (중복될 수 있지만 확실하게) */
+.summation-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* --- AI요약 음성 TTS 출력 영역 --- */
+.output-column > div {
+  margin-bottom: 20px;
+}
+
+.output-column > div:last-child {
+  margin-bottom: 0;
+}
+
+/* 'AI요약' 텍스트 */
+.column-title2 {
+  margin-top: 0;
+  padding-bottom: 0px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3d3d3d;
+}
+
+/* 'AI요약' 텍스트 */
+.output-column label {
+  /* 출력 영역 라벨 (예: "GPT Vision OCR 결과") */
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 700;
+  color: #666;
+  font-size: 14px;
+}
+
+/* output column */
+.output-column textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  resize: vertical;
+  min-height: 100px; /* 최소 높이 */
+  font-family: inherit;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.output-column .audio-player-wrapper {
+}
+
+.output-column .audio-placeholder {
+  font-style: normal;
+  color: #666;
+  border: 1px dashed #ccc;
+  padding: 15px; /* 패딩 조정 */
+  border-radius: 4px;
+  text-align: center;
+  background-color: #f9f9f9;
+  min-height: 50px; /* 최소 높이 */
+  display: flex; /* 내부 텍스트 중앙 정렬 */
+  align-items: center;
+  justify-content: center;
+}
+
+.output-column audio {
+  width: 100%;
+  margin-top: 5px; /* 라벨과의 간격 */
+}
+
+/* 학습 기록 섹션 전체 스타일 ////// 블록스타일 추가하기 */
+.history-section {
+  flex: 1;
+  min-width: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  /* 👇 다른 섹션과 유사하게 스타일 추가/수정 */
+  background-color: #ffffff; /* 흰색 배경 */
+  border-radius: 8px; /* 둥근 모서리 */
+  padding: 20px; /* 안쪽 여백 (다른 섹션과 동일하게 20px 또는 원하는 값) */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  box-sizing: border-box; /* padding과 border를 너비에 포함 (권장) */
+}
+
+/* ' 최근 학습 기록' 텍스트 */
+.column-title3 {
+  margin-top: 0;
+  padding-bottom: 0px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3d3d3d;
+}
+
+/* 학습기록 리스트 */
+.history-audio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 학습기록 박스 낱개 */
+.audio-card {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+/* 지정한 tts 이름 */
+.summary-snippet {
+  flex: 1;
+  font-size: 14px;
+  color: #3d3d3d;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+/* 기록 재생 버튼 */
+.play-button {
+  background: none;
+  color: #8dbb9e;
+  padding: 0px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3em;
+  margin-right: 10px;
+}
+
+/* 기록 삭제 버튼 */
+.delete-button {
+  background: none;
+  border: none;
+  color: #999999; /* 👈 Tab3처럼 회색으로 변경 */
+  cursor: pointer;
+  font-size: 25px; /* 👈 Tab3처럼 고정 크기 20px로 변경 */
+  padding: 10px; /* 👈 패딩은 제거하거나 필요시 조절 */
+  margin-left: auto;
+}
+
+/* 기록 삭제 버튼 호버 */
+.delete-button:hover {
+  color: #c0392b; /* 호버 시 더 진한 빨간색 */
+}
+
+/* 기록 삭제 버튼 비활성화 */
+.delete-button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ---------------- 스티키 오디오 플레이어 스타일 (하단 고정용) ---------------- */
+.sticky-audio-player.bottom-player {
+  position: sticky;
+  bottom: 0;
+  /* ✅ 배경색 변경 */
+  background-color: #8dbb9e;
+  /* ✅ 내부 여백을 늘려 더 크게 보이도록 조정 */
+  padding: 15px 20px; /* 상하 여백 증가 (기존 10px) */
+  margin: 20px -20px -20px -20px; /* main-content 패딩 상쇄 유지 */
+  z-index: 10;
+  /* border-top: 1px solid #eee; */ /* 배경색이 진해져서 구분선 제거 또는 색상 변경 고려 */
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* 그림자 약간 조정 (선택 사항) */
+  color: white; /* ✅ 내부 텍스트/아이콘 색상을 흰색으로 변경 (배경색 대비) */
+}
+
+/* 하단 플레이어에서는 라벨 숨김 */
+.sticky-audio-player.bottom-player label {
+  display: none;
+}
+
+.sticky-audio-player.bottom-player audio {
+  width: 100%;
+  display: block;
+  /* height: 40px; */ /* 높이는 브라우저 기본값 사용 또는 필요시 조정 */
+  /* 오디오 컨트롤 색상 조정이 필요할 수 있으나, 표준 컨트롤은 제한적임 */
+  /* filter: invert(1) brightness(1.5); */ /* 예시: 색상 반전 시도 (모든 브라우저 호환 X) */
+}
+
+.sticky-audio-player.bottom-player .audio-placeholder {
+  /* ✅ 플레이스홀더 텍스트 색상 변경 */
+  color: rgba(255, 255, 255, 0.8); /* 흰색 계열로 변경 */
+  padding: 10px 0;
+  border-radius: 4px;
+  text-align: center;
+  /* ✅ 플레이스홀더 최소 높이 조정 (패딩에 맞춰) */
+  min-height: auto; /* 패딩으로 높이 조절 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.filename-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px; /* 업로드 박스와의 간격 */
+}
+
+/* --- 오류 메시지 --- */
+.error-message {
+  color: #dc3545;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
