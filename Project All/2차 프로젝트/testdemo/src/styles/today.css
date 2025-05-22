@@ -1,0 +1,114 @@
+.today {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 388px;
+  height: 179px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  row-gap: 7px;
+  column-gap: 7px;
+  padding: 20px 20px 20px 20px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
+    #ffffff;
+}
+.today .input-- {
+  flex-shrink: 0;
+  width: 311px;
+  height: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
+  padding: 10px;
+  overflow: hidden;
+}
+.today .input-- .text--- {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 68px;
+  height: 20px;
+  white-space: nowrap;
+  color: #3d3d3d;
+  font-family: "Roboto";
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.today .input {
+  flex-shrink: 0;
+  width: 350px;
+  height: 114px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
+  padding: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #999999;
+}
+/* src/styles/today.css */
+
+/* ... 기존 스타일 ... */
+
+.content-section {
+  /* 기존 content-section 스타일 유지 */
+  line-height: 1.6; /* 줄 간격 조절 */
+  width: 100%; /* 너비 조절 */
+  margin: 0 auto; /* 중앙 정렬 */
+  background-color: #8dbb9e57; /* 배경색 추가 */
+  border-radius: 4px; /* 모서리 둥글게 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+  display: flex; /* Flexbox 사용 */
+  flex-direction: column; /* 세로 방향 정렬 */
+  justify-content: center; /* 중앙 정렬 */
+  align-items: center; /* 중앙 정렬 */
+  gap: 10px; /* 요소 간격 조절 */
+  margin-top: 20px; /* 상단 여백 추가 */
+  padding: 20px; /* 👈 안쪽 여백 추가! (상하좌우 20px) */
+  box-sizing: border-box; /* 👈 padding이 width에 포함되도록 추가 (권장) */
+}
+
+.hero-info-details {
+  /* 위인 정보 전체 컨테이너 스타일 (필요 시) */
+}
+
+.hero-name {
+  font-size: 1.1em; /* 이름 폰트 크기 */
+  font-weight: bold; /* 이름 굵게 */
+  margin-bottom: 0.3em; /* 이름 아래 여백 */
+  color: #3d3d3d;
+}
+
+.hero-years {
+  font-size: 0.9em; /* 연도 폰트 크기 */
+  font-weight: normal; /* 연도 폰트 굵기 보통 */
+  color: #666; /* 연도 색상 */
+  margin-left: 0.5em; /* 이름과의 간격 */
+}
+
+.hero-description {
+  font-size: 0.95em; /* 설명 폰트 크기 */
+  color: #555; /* 설명 색상 */
+  margin-top: 0; /* 설명 위쪽 여백 제거 */
+}
+
+.error-message {
+  /* 오류 메시지 스타일 */
+  color: #d9534f; /* 빨간색 계열 */
+  font-weight: bold;
+}

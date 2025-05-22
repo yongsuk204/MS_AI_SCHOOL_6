@@ -1,0 +1,56 @@
+/* 헤더 전체 영역(세로 쌓임 유지) */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 10;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.settings-icon {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* 한국사기꾼 로고 + 설정 아이콘 */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+}
+
+/* 탭 메뉴 아래 줄 */
+.tab-menu {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
+  z-index: 10;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: none;
+  font-weight: 700;
+  color: #888;
+  cursor: pointer;
+}
+
+.tab.active {
+  color: #4a8065;
+  border-bottom: 2px solid #4a8065;
+}

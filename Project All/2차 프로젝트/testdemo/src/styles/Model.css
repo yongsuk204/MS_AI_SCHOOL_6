@@ -1,0 +1,64 @@
+/* src/styles/Modal.css */
+.modal-overlay {
+  position: fixed; /* 화면에 고정 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* 반투명 검은 배경 */
+  display: flex;
+  align-items: flex-start; /* 👈 수직 상단 정렬로 변경 */
+  justify-content: center; /* 수평 중앙 정렬은 유지 */
+  padding-top: 220px; /* 👈 위쪽 여백 추가 (화면 높이의 15%, 값 조절 가능) */
+  z-index: 1000;
+  box-sizing: border-box; /* 👈 padding이 크기에 영향을 주므로 추가 (안전) */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative; /* 닫기 버튼 위치 기준 */
+  min-width: 300px; /* 최소 너비 */
+  max-width: 700px; /* 최대 너비 */
+  width: 300px; /* 화면 너비의 90% */
+  /*height: 300px;*/
+  max-height: 90vh; /* 화면 높이의 90% */
+  overflow-y: auto; /* 내용 길면 스크롤 */
+  text-align: center; /* 내부 텍스트 중앙 정렬 */
+  transform: translateX(
+    10px
+  ); /* 👈 오른쪽으로 20px 이동 (원하는 값으로 조절) */
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 30px; /* X 버튼 크기 */
+  color: #999999;
+  cursor: pointer;
+  padding: 20;
+  line-height: 1;
+}
+
+.modal-close-button:hover {
+  color: #3d3d3d;
+}
+
+/* TodayPopup 내부 스타일 예시 (필요에 따라 조정) */
+.today-popup-content .title-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #3d3d3d;
+}
+
+.today-popup-content .content-section p {
+  font-size: 16px;
+  color: #3d3d3d;
+}
+/* src/styles/Modal.css 일부 */
